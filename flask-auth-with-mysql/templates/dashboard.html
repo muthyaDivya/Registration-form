@@ -1,0 +1,18 @@
+{% extends 'app.html' %}
+{% block content %}
+
+<div class="container text-center">
+  
+
+    {% if user %}
+        <h2 class="text-center text-primary">Welcome {{user[1]}}!</h2>
+        <p class="mt-4 text-info"><strong>User Information</strong></p>
+        <ul class="list-unstyled">
+            <li><strong>Name :</strong> {{ user[1] }}</li>
+            <li><strong>Email :</strong> {{ user[2] }}</li>
+        </ul>
+    {% endif %}
+    <a href="/logout" class="btn btn-info">Logout</a>
+</div>
+
+{% endblock %}
